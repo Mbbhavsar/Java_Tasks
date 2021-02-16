@@ -12,22 +12,19 @@ public class FindNumberOfDigits {
 		
 		long n = s.nextLong();
 		int count = 0;
-		int sum = 0;
+		long sum = 0;
 		
 		while(n != 0) {
 			
-			n /= 10;
+			sum = sum + n % 10;
+			//System.out.println("Sum of given digits is "+ sum);
 			
+			n /= 10;
+		//	System.out.println("Sum of given digits is "+ n);
 			count++;
 			
 		}
 		System.out.println("Number of digits of given Number is "+count);
-		
-		for(sum=0 ;n!=0 ;n/=10)
-		{
-		sum+=n%10;
-		}
-		
 			
 		System.out.println("Sum of given digits is "+sum);
 		
